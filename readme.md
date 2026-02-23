@@ -20,4 +20,4 @@
 # ติดตั้ง Library ที่จำเป็น (mqtt, axios, etc.)
 npm install
 #สั่งรันโปรแกรม
-npm run dev 
+node subscriber.js

@@ -37,6 +37,6 @@ client.on("message", async (topic, message) => {
 });
 
 client.on("connect", () => {
-  console.log("✅ Subscriber Ready! Waiting for data...");
+  console.log(" Subscriber Ready! Waiting for data...");
   client.subscribe("iot/sensor/data");
 });

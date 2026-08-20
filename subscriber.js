@@ -1,13 +1,14 @@
 const mqtt = require("mqtt");
 const axios = require("axios");
 
-const MQTT_BROKER = "mqtts://client2.consolutechcloud.com";
-const FLASK_API = "http://127.0.0.1:5000/predict";
+// const MQTT_BROKER = "mqtts://client2.consolutechcloud.com";
+// const FLASK_API = "http://127.0.0.1:5000/predict";
 
 const client = mqtt.connect(MQTT_BROKER, {
-  username: "admin",
-  password: "tX4$WJ6m@E9K#Hq!a2P%",
-  clientId: "node-sub-" + Math.random().toString(16).substr(2, 5)
+  // username: "admin",
+  // password: "tX4$WJ6m@E9K#Hq!a2P%",
+  // clientId: "node-sub-" + Math.random().toString(16).substr(2, 5),
+  // topic: "iot/sensor/data9999",
 });
 
 client.on("message", async (topic, message) => {
@@ -38,5 +39,5 @@ client.on("message", async (topic, message) => {
 
 client.on("connect", () => {
   console.log(" Subscriber Ready! Waiting for data...");
-  client.subscribe("iot/sensor/data");
+  // client.subscribe("iot/sensor/data9999");
 });
